@@ -1,0 +1,30 @@
+{
+  "name": "colorplane-react",
+  "version": "1.0.0",
+  "description": "port of colorplane color picker as a react component",
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "^0.12.2",
+    "tinycolor2": "^1.1.1"
+  },
+    "gh-pages-deploy": {
+    "staticpath": "example"
+  },
+  "devDependencies": {
+    "babel": "^4.7.1",
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "gh-pages-deploy": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages-deploy"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "author": "meandave",
+  "license": "BSD"
+}
