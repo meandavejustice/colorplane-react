@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style type="text/css" media="screen">
+        .color {color: #33cc77;}
+        h4 {display: inline;}
+        pre {
+        background: #6A6A6A;
+        color: #F9B432;
+        width: 600px;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>ColorPlane React</h1>
+      <p>a react component for <a href="http://33cc77.com/tools/colorplane">colorplane</a></p>
+      <h4>Chosen Color is: </h4><span class="color">#33cc77</span>
+      <div id="contain" style="width: 600px;"></div>
+      <h4>Example Usage:</h4>
+      <pre>
+
+        var React = require('react');
+        var Colorplane = require('../src/index.js');
+        var colorNotify = document.querySelector('.color');
+
+        function onChangeColor(color) {
+          colorNotify.innerText = color;
+          colorNotify.style.color = color;
+        }
+
+        React.render(&lt;Colorplane
+                         color={"#33cc77"}
+                         onChange={onChangeColor}/&gt;,
+        document.querySelector('#contain'));
+      </pre>
+        <script type="text/javascript" src="bundle.js"></script>
+    </body>
+</html>
