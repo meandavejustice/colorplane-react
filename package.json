@@ -1,6 +1,6 @@
 {
   "name": "colorplane-react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "port of colorplane color picker as a react component",
   "main": "src/index.js",
   "dependencies": {

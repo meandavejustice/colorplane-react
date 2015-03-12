@@ -6,6 +6,13 @@ var Colorplane = React.createClass({
   getInitialState: function() {
     return {activeColor: '#33cc77', color: '#33cc77'};
   },
+  componentDidMount: function() {
+    if (this.props.color) {
+      if (this.props.color !== this.state.activeColor) {
+        this.setState({activeColor: this.props.color, color: this.props.color});
+      }
+    }
+  },
   mouseover: function(ev) {
     var color = getHexColor(ev, this.refs.canvas.getDOMNode()).hex;
     this.setState({activeColor: color});
@@ -15,6 +22,10 @@ var Colorplane = React.createClass({
     var color = this.state.activeColor;
     this.setState({color: color});
     this.refs.selectedColor.getDOMNode().style.background = color;
+
+    if (this.props.onChange) {
+      this.props.onChange(color);
+    }
   },
   render: function() {
     return (
